@@ -1,0 +1,34 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/homestyle.css' %}">
+
+<!DOCTYPE html>
+<html class="backie">
+
+<!-- navigation bar -->
+<li class='nav'>
+    <a href="{% url 'homepage' %}"> Home</a>
+    <a href="{% url 'blog' %}"> Blog</a>
+    <a href="{% url 'portfolio' %}"> Portfolio</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'merch' %}">Merch</a>
+</li>
+<h2 class='neartop centered'>Blog Posts</h2>
+
+{% if latest_posts %}
+        {% for post in latest_posts %}
+        <!-- <li><a href="{% url 'blog:postbody' post.id %}">{{ post.BlogTitle }}</a></li>-->
+        <div class="gallery">
+            <a href="{% url 'blog:postbody' post.id %}">
+                <img src="/static/blog/images/{{post.Image}}">
+            </a>
+            <div class='desc'>{{ post.BlogTitle }}</div>
+        </div>
+        {% endfor %}
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}
+
+
+
+</html>

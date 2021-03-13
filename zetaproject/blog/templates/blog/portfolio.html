@@ -1,0 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/homestyle.css' %}">
+
+<html class="backie">
+
+<!-- navigation bar -->
+<li class='nav'>
+    <a href="{% url 'homepage' %}"> Home</a>
+    <a href="{% url 'blog' %}"> Blog</a>
+    <a href="{% url 'portfolio' %}"> Portfolio</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'merch' %}">Merch</a>
+</li>
+
+<h2 class='centered' style="margin-top: 100px;"> Test portfolio</h2>
+
+
+{% if portposts %}
+    {% for post in portposts %}
+    <div class="gallery" style="width: 400; height: 400;">
+        <a href="{% url 'portfolio' %}">
+            <img src="/static/blog/images/{{post.Images}}">
+        </a>
+        <div class='desc'>{{post.ProjectName}}</div>
+    </div>
+    {% endfor %}
+{% else %}
+<p>No posts are available.</p>
+{% endif %}
+</html>

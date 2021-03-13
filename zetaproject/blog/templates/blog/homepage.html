@@ -1,0 +1,66 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/homestyle.css' %}">
+
+<!DOCTYPE html>
+<html class="backie">
+
+<!-- navigation bar -->
+<li class='nav'>
+    <a class="logo" href="{% url 'homepage' %}"> Leffers Logo </a>
+    <a href="{% url 'homepage' %}"> Home</a>
+    <a href="{% url 'blog' %}"> Blog</a>
+    <a href="{% url 'portfolio' %}"> Portfolio</a>
+    <a href="{% url 'merch' %}">Merch</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a class="socialmedia" href="https://www.instagram.com/chaseleffers/?hl=en"> 
+        <img src="static/blog/images/instagram.png" width="40" heigth: auto>
+    </a>
+    <a class="socialmedia" href="https://www.facebook.com/chasenleffers"> 
+        <img src="static/blog/images/facebook.png" width="40" heigth: auto>
+    </a>
+    <a class="socialmedia" href="https://www.linkedin.com/in/chase-leffers-95b821146/"> 
+        <img src="static/blog/images/linkedin.png" width="40" heigth: auto>
+    </a>
+    <a class="socialmedia" href="https://twitter.com/chaseleffers1"> 
+        <img src="static/blog/images/twitter.png" width="40" heigth: auto>
+    </a>
+    
+</li>
+
+<div class="topimage">
+    <img src="static/blog/images/mountainshot.png" width="200" heigth: auto>
+    <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chase Leffers</h4>
+</div>
+
+<div class='homecentered'> 
+    <div>
+        <h1 class="centered">Welcome</h1>
+    </div>
+    <h7 class='textstyle' >
+        <p>Welcome to my webpage! Whether you came here on purpose or by accident,
+        all are welcome and encouraged to look around. If you came to learn more about my qualifications, then
+        here is a great place to start. My name is, obviously, Chase Leffers and I am a self-proclaimed visionary,
+        futurist, and student of life. I grew up on science fiction and fantasy books, and I quickly learned that 
+        my drive throughout life is to make the wonderful technologies in those stories possible and accessible. I believe
+        that such a future is possible only with concerted effort-- Technology does not magically imporove. It only improves
+        when a group of peopel decide to dedicate their life to make something new and to push the envelope of human 
+        achievement. I might just be a student right now, and I might be applying to an entry-level job(or maybe I've already begun
+        to make my own path and you're looking to be hired by me), but my dreams go far beyond the monotonous or menial. If any of what
+        you've read so far has struck a cord with you, then  you're the kind of person I want to keep close, the kind of person I 
+        would love to work with to create a new world.<br /><br />
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thanks for taking the time to read that. I hope it was worthwile! If you still want to learn more about me(and haven't written me off
+        as crazy), then feel free to click through the menu at the top of the wepage to see some projects I've been working on and some more
+        of my ideas written in blog-form. If I've gathered the motivation and coding expertise, then you should be able to buy something
+        leffers merch as well. Finally, feel free to shoot me an email or friend me on social media if you want more Chase.
+        </p>
+    </h7>
+</div>
+
+<div class="bottombar">
+    <h5 style="line-height: 5px;">Created in 2021</h5>
+    <h5>Hope you enjoyed this webpage. Now go read a book!</h5>
+</div>
+
+</html>
